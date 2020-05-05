@@ -1,6 +1,4 @@
-ARG IMAGE=intersystems/iris:2019.1.0S.111.0
-ARG IMAGE=store/intersystems/iris-community:2019.3.0.309.0
-ARG IMAGE=store/intersystems/iris-community:2019.4.0.379.0
+ARG IMAGE=intersystemsdc/iris-community:2020.2.0.196.0-zpm
 FROM $IMAGE
 
 USER root
@@ -11,11 +9,11 @@ RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisapp
 
 USER irisowner
 
-RUN mkdir -p /tmp/deps \
+ #RUN mkdir -p /tmp/deps \
 
- && cd /tmp/deps \
+# && cd /tmp/deps \
 
- && wget -q https://pm.community.intersystems.com/packages/zpm/latest/installer -O zpm.xml
+# && wget -q https://pm.community.intersystems.com/packages/zpm/latest/installer -O zpm.xml
 
 
 COPY  Installer.cls .
