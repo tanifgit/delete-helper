@@ -17,7 +17,7 @@ XData setup
       <Import File="${SourceDir}" Flags="ck" Recurse="1"/>
     </Configuration>
     
-
+</Namespace>
  
 
 
