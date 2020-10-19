@@ -3,7 +3,8 @@
   <Document name="delete-helper.ZPM">
     <Module>
       <Name>delete-helper</Name>
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
+      <Description>A Super class for adding a code-generator %OnDelete method</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="SampleUtil.PKG"/>
