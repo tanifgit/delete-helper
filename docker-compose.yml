@@ -6,10 +6,13 @@ services:
       dockerfile: ${DOCKERFILE:-Dockerfile}
     restart: always
     ports: 
-      - 51773
+#      - 51773
+# new SuperSever Port
+      - 1972
       - ${IRIS_PORT}:52773
       - 53773
     volumes:
-      - ~/iris.key:/usr/irissys/mgr/iris.key
+# no license required for communnity image
+#      - ~/iris.key:/usr/irissys/mgr/iris.key
       - ./:/irisdev/app
       - ./src/csp:/usr/irissys/mgr/csp/irisapp
